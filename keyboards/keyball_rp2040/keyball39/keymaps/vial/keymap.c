@@ -16,6 +16,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+// tokinarazuさんのkeyball_rp2040にてRP2024対応
+// https://github.com/tokinarazu/keyball_rp2040
+// ukoasisさんのvial-qmkにてvial対応
+// https://github.com/ukoasis/vial-qmk
+
 #include QMK_KEYBOARD_H
 
 #include "quantum.h"
