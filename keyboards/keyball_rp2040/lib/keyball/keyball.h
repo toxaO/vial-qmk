@@ -178,6 +178,9 @@ typedef struct {
     keypos_t       last_pos;
     report_mouse_t last_mouse;
 
+    uint16_t auto_mouse_layer_timeout;
+    layer_state_t last_layer_state;
+
     // Buffer to indicate pressing keys.
     char pressing_keys[KEYBALL_OLED_MAX_PRESSING_KEYCODES + 1];
 } keyball_t;

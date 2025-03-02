@@ -354,8 +354,7 @@ void keyball_oled_render_keyinfo_custom(void) {
     oled_write_char(to_1x(keyball.last_kc >> 4), false);
     oled_write_char(to_1x(keyball.last_kc), false);
 
-
-    // // indicate jis mode: on/off
+    // indicate jis mode: on/off
     oled_write_P(PSTR(" JP"), false);
     if (is_jis_mode()) {
         oled_write_P(LFSTR_ON, false);
@@ -378,7 +377,7 @@ void keyball_oled_render_ballinfo_custom(void) {
     // oled_write(format_4d(keyball.last_mouse.h), false);
     // oled_write(format_4d(keyball.last_mouse.v), false);
 
-    // // indicate Caps Word mode: on/off
+    // indicate Caps Word mode: on/off
     oled_write_P(PSTR("    CW"), false);
     if (is_caps_word_on()) {
         oled_write_P(LFSTR_ON, false);
@@ -405,8 +404,7 @@ void keyball_oled_render_ballinfo_custom(void) {
             oled_write_P(PSTR("---"), false);
             break;
     }
-    //
-    oled_write_P(PSTR("    \xB1\xBC\xBD"), false);
+    oled_write_P(PSTR(" \xB1\xBC\xBD"), false);
     oled_write(format_4d(keyball_get_cpi()) + 1, false);
     oled_write_P(PSTR("00 "), false);
 
