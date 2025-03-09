@@ -129,6 +129,11 @@
       "name": "CW_ON",
       "title": "Toggle Caps Word mode",
       "shortName": "CW\nON"
+    },
+    {
+      "name": "SEL_WORD",
+      "title": "Select word",
+      "shortName": "SEL\nWORD"
     }
   ]
 }

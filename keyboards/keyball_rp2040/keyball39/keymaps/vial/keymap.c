@@ -758,7 +758,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 //     last_key_pressed = now;
 //   }
 
-//   if (!process_select_word(keycode, record, SELWORD)) { return false; }
+  if (!process_select_word(keycode, record, SELWORD)) { return false; }
 
 //   const uint8_t mods = get_mods();
 // #ifndef NO_ACTION_ONESHOT
