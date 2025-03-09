@@ -89,6 +89,22 @@
       "title": "Decrease scroll divider (min 0 = 1/1) <- Most Scroll fast",
       "shortName": "SCRL\nDVD"
     },
+
+    {
+      "name": "AML_TO",
+      "title": "Toggle automatic mouse layer",
+      "shortName": "AML\nTO"
+    },
+    {
+      "name": "AML_I50",
+      "title": "Increase 50ms automatic mouse layer timeout(max 15=950ms)",
+      "shortName": "AML\nI50"
+    },
+    {
+      "name": "AML_D50",
+      "title": "Decrease 50ms automatic mouse layer timeout(min 1=250ms)",
+      "shortName": "AML\nD50"
+    },
     {
       "name": "SSNP_VRT",
       "title": "Set scroll snap mode as vertical",
@@ -105,19 +121,9 @@
       "shortName": "SSNP\nFRE"
     },
     {
-      "name": "AML_TO",
-      "title": "Toggle automatic mouse layer",
-      "shortName": "AML\nTO"
-    },
-    {
-      "name": "AML_I50",
-      "title": "Increase 50ms automatic mouse layer timeout(max 15=950ms)",
-      "shortName": "AML\nI50"
-    },
-    {
-      "name": "AML_D50",
-      "title": "Decrease 50ms automatic mouse layer timeout(min 1=250ms)",
-      "shortName": "AML\nD50"
+      "name": "A2J_TOGG",
+      "title": "Toggle ANSI to JIS Translation",
+      "shortName": "A2J\nTOGG"
     }
   ]
 }

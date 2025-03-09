@@ -43,8 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _ADJUST_M 8
 #define _KEYBOARD_M 9
 
- enum custom_keycodes {
-  A2J_TOGG = SAFE_RANGE, // 0x7E40  User0
+//  enum custom_keycodes {
 //   MY_MACRO_0 = SAFE_RANGE,  // 0x7E40  User0
 //   MY_MACRO_1,  // 0x7E41  User1
 //   MY_MACRO_2,  // 0x7E42  User2
@@ -73,7 +72,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //   SMTD_KEYCODES_END, // 0x7E59  User25
 //   MY_USER_0 = KEYBALL_SAFE_RANGE + 32,  // 0x7E60  User31の次
 //   M_UPDIR,
- };
+//  };
 
 // #include "features/sm_td.h"
 
