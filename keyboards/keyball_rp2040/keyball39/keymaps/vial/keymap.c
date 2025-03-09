@@ -873,6 +873,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
+    case CW_ON:
+      if (record->event.pressed) {
+        caps_word_on();
+      }
+      return false;
+      break;
   }
 
   if (is_jis_mode()) {

@@ -124,6 +124,11 @@
       "name": "A2J_TOGG",
       "title": "Toggle ANSI to JIS Translation",
       "shortName": "A2J\nTOGG"
+    },
+    {
+      "name": "CW_ON",
+      "title": "Toggle Caps Word mode",
+      "shortName": "CW\nON"
     }
   ]
 }
