@@ -43,6 +43,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _ADJUST_M 8
 #define _KEYBOARD_M 9
 
+//  Vialではカスタムキーコードはlib/keyball/keyball.hにて定義し、QK_KB_xxとして定義する
 //  enum custom_keycodes {
 //   MY_MACRO_0 = SAFE_RANGE,  // 0x7E40  User0
 //   MY_MACRO_1,  // 0x7E41  User1
