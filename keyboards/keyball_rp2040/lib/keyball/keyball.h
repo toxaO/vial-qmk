@@ -119,7 +119,7 @@ enum keyball_keycodes {
     // A2J mode toggle keycode
     A2J_TOGG = QK_KB_16, // Toggle A2J mode
     CW_ON    = QK_KB_17, // Toggle Caps Word mode
-    SEL_WORD  = QK_KB_18, // Select word
+    SELWORD  = QK_KB_18, // Select word
 
     // User customizable 32 keycodes.
     KEYBALL_SAFE_RANGE = QK_USER_0,
