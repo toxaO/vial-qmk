@@ -43,7 +43,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _ADJUST_M 8
 #define _KEYBOARD_M 9
 
-// enum custom_keycodes {
+//  Vialではカスタムキーコードはlib/keyball/keyball.hにて定義し、QK_KB_xxとして定義する
+//  enum custom_keycodes {
 //   MY_MACRO_0 = SAFE_RANGE,  // 0x7E40  User0
 //   MY_MACRO_1,  // 0x7E41  User1
 //   MY_MACRO_2,  // 0x7E42  User2
@@ -72,7 +73,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //   SMTD_KEYCODES_END, // 0x7E59  User25
 //   MY_USER_0 = KEYBALL_SAFE_RANGE + 32,  // 0x7E60  User31の次
 //   M_UPDIR,
-// };
+//  };
 
 // #include "features/sm_td.h"
 
@@ -742,7 +743,7 @@ void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
 //   }
 // }
 
-// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // //  if (!process_smtd(keycode, record)) {
 // //    return false;
 // //  }
@@ -757,7 +758,7 @@ void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
 //     last_key_pressed = now;
 //   }
 
-//   if (!process_select_word(keycode, record, SELWORD)) { return false; }
+  if (!process_select_word(keycode, record, SELWORD)) { return false; }
 
 //   const uint8_t mods = get_mods();
 // #ifndef NO_ACTION_ONESHOT
@@ -766,7 +767,7 @@ void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
 //   uint8_t shift_mods = mods & MOD_MASK_SHIFT;
 // #endif  // NO_ACTION_ONESHOT
 
-//   switch (keycode) {
+  switch (keycode) {
 //     case MY_MACRO_0:
 //       if (record->event.pressed) {
 //         // WIN + SPACE (JIS ⇔ US配列切替)
@@ -867,17 +868,23 @@ void on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
 //         }
 //         break;
 
-//     case A2J_TOGG:
-//       if (record->event.pressed) {
-//         set_jis_mode(!is_jis_mode());
-//       }
-//       return false;
-//       break;
-//   }
+    case A2J_TOGG:
+      if (record->event.pressed) {
+        set_jis_mode(!is_jis_mode());
+      }
+      return false;
+      break;
+    case CW_ON:
+      if (record->event.pressed) {
+        caps_word_on();
+      }
+      return false;
+      break;
+  }
 
-//   if (is_jis_mode()) {
-//     return process_record_user_a2j(keycode, record);
-//   }
+  if (is_jis_mode()) {
+    return process_record_user_a2j(keycode, record);
+  }
 
-//   return true;
-// }
+  return true;
+}
