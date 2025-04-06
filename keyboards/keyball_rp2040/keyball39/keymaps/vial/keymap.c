@@ -239,6 +239,12 @@ void keyboard_post_init_user() {
 layer_state_t layer_state_set_user(layer_state_t state) {
     // Auto enable scroll mode when the highest layer is 3
     keyball_set_scroll_mode(get_highest_layer(state) == _ADJUST_W || get_highest_layer(state) == _ADJUST_M);
+    // AML有効時のhandler
+    #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+     // keyball_keep_auto_mouse_layer_if_needed(state);
+      keyball_handle_auto_mouse_layer_change(state);
+    #endif
+    
     // バックライトの色の初期値定義
     uint8_t layer = biton32(state);
     switch (layer) {
