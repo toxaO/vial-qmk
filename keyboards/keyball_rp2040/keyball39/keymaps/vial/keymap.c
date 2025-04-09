@@ -886,6 +886,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
+
+    // SCRL_MO_VRT/HOR/FREの実装
+    case SCRL_MO_VRT:
+      keyball_set_scroll_mode(record->event.pressed);
+      keyball_set_scrollsnap_mode(KEYBALL_SCROLLSNAP_MODE_VERTICAL);
+      return false;
+      break;
+    case SCRL_MO_HOR:
+      keyball_set_scroll_mode(record->event.pressed);
+      keyball_set_scrollsnap_mode(KEYBALL_SCROLLSNAP_MODE_HORIZONTAL);
+      return false;
+      break;
+    case SCRL_MO_FRE:
+      keyball_set_scroll_mode(record->event.pressed);
+      keyball_set_scrollsnap_mode(KEYBALL_SCROLLSNAP_MODE_FREE);
+      return false;
+      break;
   }
 
   if (is_jis_mode()) {

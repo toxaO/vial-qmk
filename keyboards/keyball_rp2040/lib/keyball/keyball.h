@@ -12,7 +12,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+along with this pr
+ogram.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
@@ -39,7 +40,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /// To disable scroll snap feature, define 0 in your config.h
 #ifndef KEYBALL_SCROLLSNAP_ENABLE
 // スクロールモードを垂直をデフォルトとし、水平方向に一定カウント後にフリースクロールとする設定
-#    define KEYBALL_SCROLLSNAP_ENABLE 1 // 元々は2
+#    define KEYBALL_SCROLLSNAP_ENABLE 2 // 元々は2
 #endif
 
 #ifndef KEYBALL_SCROLLSNAP_RESET_TIMER
@@ -120,6 +121,12 @@ enum keyball_keycodes {
     A2J_TOGG = QK_KB_16, // Toggle A2J mode
     CW_ON    = QK_KB_17, // Toggle Caps Word mode
     SELWORD  = QK_KB_18, // Select word
+
+    // スクロールカスタム
+    SCRL_MO_VRT = QK_KB_19, // Momentary vertical scroll mode
+    SCRL_MO_HOR = QK_KB_20, // Momentary horizontal scroll mode
+    SCRL_MO_FRE = QK_KB_21, // Momentary free scroll mode
+
 
     // User customizable 32 keycodes.
     KEYBALL_SAFE_RANGE = QK_USER_0,
