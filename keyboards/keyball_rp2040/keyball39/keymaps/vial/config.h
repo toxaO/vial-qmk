@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // AML設定
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-#define AUTO_MOUSE_DEFAULT_LAYER 4
+#define AUTO_MOUSE_DEFAULT_LAYER 8
 #define AUTO_MOUSE_LAYER_KEEP_TIME 30000 // マウスレイヤーを維持する時間を30秒に設定
 
 #define TAPPING_TERM 180
@@ -66,7 +66,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define OLED_TIMEOUT 10000 // ミリ秒
 
 // レイヤ―数追加
-#define DYNAMIC_KEYMAP_LAYER_COUNT 10
+#define DYNAMIC_KEYMAP_LAYER_COUNT 9
 
 #undef KEYBALL_SCROLL_DIV_DEFAULT
 // マウス、スクロール速度デフォルト値の設定
@@ -93,3 +93,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VIAL_KEYBOARD_UID {0x7C, 0xDC, 0x8F, 0x9A, 0xFA, 0x6B, 0x63, 0xFA}
 #define VIAL_UNLOCK_COMBO_ROWS { 0, 0 }
 #define VIAL_UNLOCK_COMBO_COLS { 0, 1 }
+
+// OS検出のデバウンス時間を400msに設定
+#define OS_DETECTION_DEBOUNCE 400
