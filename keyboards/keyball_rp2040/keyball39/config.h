@@ -71,8 +71,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define OLED_FONT_END 195
 #endif
 
+// デフォルトのレイヤー設定上限数を32に設定
 #if !defined(LAYER_STATE_8BIT) && !defined(LAYER_STATE_16BIT) && !defined(LAYER_STATE_32BIT)
-#    define LAYER_STATE_8BIT
+#    define LAYER_STATE_32BIT
 #endif
 
 #define SPI_DRIVER SPID0

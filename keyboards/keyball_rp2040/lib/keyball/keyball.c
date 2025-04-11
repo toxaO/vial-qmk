@@ -575,7 +575,21 @@ void keyball_oled_render_layerinfo(void) {
     //     Layer:-23------------
     //
     oled_write_P(PSTR("L\xB6\xB7r\xB1"), false);
-    for (uint8_t i = 1; i < 8; i++) {
+    // for (uint8_t i = 1; i < 8; i++) {
+    //     oled_write_char((layer_state_is(i) ? to_1x(i) : BL), false);
+    // }
+
+    // レイヤー表示ループを修正
+    for (uint8_t i = 1; i < 9; i++) {  // 1-8までのレイヤーを処理（9未満なので8まで）
+        // レイヤー4はスキップ
+        if (i == 4) {
+            continue;
+        }
+        
+        // レイヤー5-7は白黒反転して表示
+        // bool invert = (i >= 5 && i <= 7);
+        
+        // レイヤーの状態を確認して表示
         oled_write_char((layer_state_is(i) ? to_1x(i) : BL), false);
     }
     oled_write_char(' ', false);
