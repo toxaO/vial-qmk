@@ -465,6 +465,7 @@ void dynamic_macro_record_end_user(int8_t direction) {
 }
 #endif
 
+// OLEDの表示内容のカスタマイズ
 void oledkit_render_info_user(void) {
 //    keyball_oled_render_keyinfo();
     keyball_oled_render_keyinfo_custom();
